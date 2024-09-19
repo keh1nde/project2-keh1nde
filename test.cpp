@@ -83,5 +83,10 @@ int main() {
     std::cout << "Sweetness Level: " << dessert.getSweetnessLevel() << std::endl;
     std::cout << "Contains Nuts: " << (dessert.containsNuts() ? "True" : "False") << std::endl;
 
+    // Testing setName()
+    default_appetizer.setName("UNKNOWN");
+    main_course.setName("Grilled Chicken");
+    dessert.setName("Chocolate Cake");
+
     return 0;
 }
