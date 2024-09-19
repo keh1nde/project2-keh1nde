@@ -23,11 +23,6 @@ Appetizer::Appetizer() {
 * @param spiciness_level The spiciness level of the appetizer.
 * @param vegetarian Flag indicating if the appetizer is vegetarian.
 */
-#include "Appetizer.hpp"
-
-// Default constructor
-
-// Parameterized constructor
 Appetizer::Appetizer(const std::string& name, const std::vector<std::string>& ingredients, int prep_time,
                      double price, const CuisineType& cuisine_type, ServingStyle serving_style,
                      int spiciness_level, bool vegetarian)
