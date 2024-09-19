@@ -25,8 +25,9 @@ public:
 
     // Parameterized constructor
     MainCourse(const std::string& name, const std::vector<std::string>& ingredients, int prep_time,
-               double price, const std::string& cuisine_type, CookingMethod cooking_method,
-               const std::string& protein_type, const std::vector<SideDish>& side_dishes, bool gluten_free);
+               double price, const CuisineType& cuisine_type, CookingMethod cooking_method,
+               const std::string& protein_type,
+               const std::vector<SideDish>& side_dishes, bool gluten_free);
 
     // Accessors and Mutators
     void setCookingMethod(CookingMethod cooking_method);
