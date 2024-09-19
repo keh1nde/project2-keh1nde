@@ -23,9 +23,9 @@ Appetizer::Appetizer() {
 * @param spiciness_level The spiciness level of the appetizer.
 * @param vegetarian Flag indicating if the appetizer is vegetarian.
 */
-Appetizer::Appetizer(const std::string& name, const std::vector<std::string>& ingredients, int prep_time,
-                     double price, const CuisineType& cuisine_type, ServingStyle serving_style,
-                     int spiciness_level, bool vegetarian)
+Appetizer::Appetizer(const std::string& name, const std::vector<std::string>& ingredients, const int& prep_time,
+                     const double& price, const CuisineType& cuisine_type, const ServingStyle& serving_style,
+                     const int& spiciness_level, const bool& vegetarian)
         : Dish(name, ingredients, prep_time, price, cuisine_type){
     this->serving_style_ = serving_style;
     this->spiciness_level_ = spiciness_level;
@@ -38,7 +38,7 @@ Appetizer::Appetizer(const std::string& name, const std::vector<std::string>& in
 * @post Sets the private member `serving_style_` to the value of the
 parameter.
 */
-void Appetizer::setServingStyle(Appetizer::ServingStyle serving_style) {
+void Appetizer::setServingStyle(const Appetizer::ServingStyle& serving_style) {
     serving_style_ = serving_style;
 }
 
@@ -56,7 +56,7 @@ the appetizer.
  * @post Sets the private member `spiciness_level_` to the value of the
 parameter.
 */
-void Appetizer::setSpicinessLevel(int spiciness_level) {
+void Appetizer::setSpicinessLevel(const int& spiciness_level) {
     spiciness_level_ = spiciness_level;
 }
 
@@ -74,7 +74,7 @@ vegetarian.
 * @post Sets the private member `vegetarian_` to the value of the
 parameter.
 */
-void Appetizer::setVegetarian(bool vegetarian) {
+void Appetizer::setVegetarian(const bool& vegetarian) {
     vegetarian_ = vegetarian;
 }
 

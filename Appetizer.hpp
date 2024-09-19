@@ -17,18 +17,18 @@ public:
     Appetizer();
 
     // Parameterized constructor
-    Appetizer(const std::string& name, const std::vector<std::string>& ingredients, int prep_time,
-              double price, const CuisineType& cuisine_type, ServingStyle serving_style,
-              int spiciness_level, bool vegetarian);
+    Appetizer(const std::string& name, const std::vector<std::string>& ingredients, const int& prep_time,
+              const double& price, const CuisineType& cuisine_type, const ServingStyle& serving_style,
+              const int& spiciness_level, const bool& vegetarian);
 
     // Accessors and Mutators
-    void setServingStyle(ServingStyle serving_style);
+    void setServingStyle(const ServingStyle& serving_style);
     ServingStyle getServingStyle() const;
 
-    void setSpicinessLevel(int spiciness_level);
+    void setSpicinessLevel(const int& spiciness_level);
     int getSpicinessLevel() const;
 
-    void setVegetarian(bool vegetarian);
+    void setVegetarian(const bool& vegetarian);
     bool isVegetarian() const;
 
 private:

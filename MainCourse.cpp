@@ -27,9 +27,9 @@ course.
 * @param gluten_free Boolean flag indicating if the main course is
 gluten-free.
 */
-MainCourse::MainCourse(const std::string &name, const std::vector<std::string> &ingredients, int prep_time,
-                       double price, const CuisineType &cuisine_type, MainCourse::CookingMethod cooking_method,
-                       const std::string &protein_type,const std::vector<SideDish> &side_dishes, bool gluten_free)
+MainCourse::MainCourse(const std::string &name, const std::vector<std::string> &ingredients, const int& prep_time,
+                       const double& price, const CuisineType &cuisine_type, const MainCourse::CookingMethod& cooking_method,
+                       const std::string &protein_type,const std::vector<SideDish> &side_dishes, const bool& gluten_free)
                        : Dish(name, ingredients, prep_time, price, cuisine_type){
     this->cooking_method_ = cooking_method;
     this->protein_type_ = protein_type;
@@ -43,7 +43,7 @@ MainCourse::MainCourse(const std::string &name, const std::vector<std::string> &
 * @post Sets the private member `cooking_method_` to the value of the
 parameter.
 */
-void MainCourse::setCookingMethod(MainCourse::CookingMethod cooking_method) {
+void MainCourse::setCookingMethod(const MainCourse::CookingMethod& cooking_method) {
     cooking_method_ = cooking_method;
 }
 
@@ -95,7 +95,7 @@ std::vector<MainCourse::SideDish> MainCourse::getSideDishes() const {
 * @post Sets the private member `gluten_free_` to the value of the
 * parameter.
 */
-void MainCourse::setGlutenFree(bool gluten_free) {
+void MainCourse::setGlutenFree(const bool& gluten_free) {
     gluten_free_ = gluten_free;
 }
 

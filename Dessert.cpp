@@ -23,9 +23,9 @@ Dessert::Dessert() {
 * @param sweetness_level The sweetness level of the dessert.
 * @param contains_nuts Flag indicating if the dessert contains nuts.
 */
-Dessert::Dessert(const std::string &name, const std::vector<std::string> &ingredients, int prep_time, double price,
-                 const Dish::CuisineType &cuisine_type, const Dessert::FlavorProfile &flavor_profile,
-                 int sweetness_level, const bool &contains_nuts)
+Dessert::Dessert(const std::string &name, const std::vector<std::string> &ingredients, const int& prep_time,
+                 const double& price, const Dish::CuisineType &cuisine_type, const Dessert::FlavorProfile &flavor_profile,
+                 const int& sweetness_level, const bool &contains_nuts)
                  : Dish(name, ingredients, prep_time, price, cuisine_type) {
     this->flavor_profile_ = flavor_profile;
     this->sweetness_level_ = sweetness_level;
@@ -39,7 +39,7 @@ Dessert::Dessert(const std::string &name, const std::vector<std::string> &ingred
 * @post Sets the private member `flavor_profile_` to the value of the
 parameter.
 */
-void Dessert::setFlavorProfile(Dessert::FlavorProfile flavor_profile) {
+void Dessert::setFlavorProfile(const Dessert::FlavorProfile& flavor_profile) {
     flavor_profile_ = flavor_profile;
 }
 
@@ -56,7 +56,7 @@ Dessert::FlavorProfile Dessert::getFlavorProfile() const {
 * @post Sets the private member `contains_nuts_` to the value of the nuts.
 parameter.
 */
-void Dessert::setContainsNuts(bool contains_nuts) {
+void Dessert::setContainsNuts(const bool& contains_nuts) {
     contains_nuts_ = contains_nuts;
 }
 
@@ -73,7 +73,7 @@ the dessert.
 * @post Sets the private member `sweetness_level_` to the value of the
 parameter.
 */
-void Dessert::setSweetnessLevel(int sweetness_level) {
+void Dessert::setSweetnessLevel(const int& sweetness_level) {
     sweetness_level_ = sweetness_level;
 }
 
