@@ -6,9 +6,48 @@
 #define PROJECT2_KEH1NDE_MAINDISH_H
 
 
-class MainDish {
+#include <string>
+#include <vector>
+#include "Dish.hpp"
 
+class MainCourse : public Dish {
+public:
+    enum CookingMethod { GRILLED, BAKED, FRIED, STEAMED, RAW };
+
+    struct SideDish {
+        std::string name;
+        enum Category { GRAIN, PASTA, LEGUME, BREAD, SALAD, SOUP, STARCHES, VEGETABLE };
+        Category category;
+    };
+
+    // Default constructor
+    MainCourse();
+
+    // Parameterized constructor
+    MainCourse(const std::string& name, const std::vector<std::string>& ingredients, int prep_time,
+               double price, const std::string& cuisine_type, CookingMethod cooking_method,
+               const std::string& protein_type, const std::vector<SideDish>& side_dishes, bool gluten_free);
+
+    // Accessors and Mutators
+    void setCookingMethod(CookingMethod cooking_method);
+    CookingMethod getCookingMethod() const;
+
+    void setProteinType(const std::string& protein_type);
+    std::string getProteinType() const;
+
+    void addSideDish(const SideDish& side_dish);
+    std::vector<SideDish> getSideDishes() const;
+
+    void setGlutenFree(bool gluten_free);
+    bool isGlutenFree() const;
+
+private:
+    CookingMethod cooking_method_;
+    std::string protein_type_;
+    std::vector<SideDish> side_dishes_;
+    bool gluten_free_;
 };
+
 
 
 #endif //PROJECT2_KEH1NDE_MAINDISH_H
