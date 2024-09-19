@@ -18,8 +18,8 @@ public:
 
     // Parameterized constructor
     Dessert(const std::string& name, const std::vector<std::string>& ingredients, int prep_time,
-            double price, const std::string& cuisine_type, FlavorProfile flavor_profile,
-            int sweetness_level, bool contains_nuts);
+            double price, const CuisineType& cuisine_type, const FlavorProfile& flavor_profile,
+            int sweetness_level, const bool& contains_nuts);
 
     // Accessors and Mutators
     void setFlavorProfile(FlavorProfile flavor_profile);
