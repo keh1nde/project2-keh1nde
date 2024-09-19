@@ -9,11 +9,7 @@
  * Initializes all private members with default values.
 */
 Appetizer::Appetizer() {
-    std::string name_ = "UNKNOWN";
-    std::vector<std::string> ingredients_;
-    int prep_time_ 0;
-    double price_ = 0;
-    CuisineType cuisine_type_ = OTHER;
+
 }
 
 /**
@@ -27,9 +23,70 @@ Appetizer::Appetizer() {
 * @param spiciness_level The spiciness level of the appetizer.
 * @param vegetarian Flag indicating if the appetizer is vegetarian.
 */
-Appetizer::Appetizer(const std::string& name, const std::vector<std::string>& ingredients,
-                     const int& prep_time, const double& price, const CuisineType& cuisine_type,
-                     const std::string& serving_style, const int& spiciness_level, const bool& vegetarian)
-        : Dish(name, ingredients, prep_time, price, cuisine_type),
-          serving_style_(serving_style), spiciness_level_(spiciness_level), vegetarian_(vegetarian) {
+#include "Appetizer.hpp"
+
+// Default constructor
+
+// Parameterized constructor
+Appetizer::Appetizer(const std::string& name, const std::vector<std::string>& ingredients, int prep_time,
+                     double price, const CuisineType& cuisine_type, ServingStyle serving_style,
+                     int spiciness_level, bool vegetarian)
+        : Dish(name, ingredients, prep_time, price, cuisine_type){
+    this->serving_style_ = serving_style;
+    this->spiciness_level_ = spiciness_level;
+    this->vegetarian_ = vegetarian;
 }
+
+/**
+* Sets the serving style of the appetizer.
+* @param serving_style The new serving style.
+* @post Sets the private member `serving_style_` to the value of the
+parameter.
+*/
+void Appetizer::setServingStyle(Appetizer::ServingStyle serving_style) {
+    serving_style_ = serving_style;
+}
+
+/**
+ * @return The serving style of the appetizer (as an enum).
+ */
+Appetizer::ServingStyle Appetizer::getServingStyle() const {
+    return serving_style_;
+}
+
+/**
+* Sets the spiciness level of the appetizer.
+* @param spiciness_level An integer representing the spiciness level of
+the appetizer.
+ * @post Sets the private member `spiciness_level_` to the value of the
+parameter.
+*/
+void Appetizer::setSpicinessLevel(int spiciness_level) {
+    spiciness_level_ = spiciness_level;
+}
+
+/**
+* @return The spiciness level of the appetizer.
+*/
+int Appetizer::getSpicinessLevel() const {
+    return spiciness_level_;
+}
+
+/**
+* Sets the vegetarian flag of the appetizer.
+* @param vegetarian A boolean indicating if the appetizer is
+vegetarian.
+* @post Sets the private member `vegetarian_` to the value of the
+parameter.
+*/
+void Appetizer::setVegetarian(bool vegetarian) {
+    vegetarian_ = vegetarian;
+}
+
+/**
+* @return True if the appetizer is vegetarian, false otherwise.
+*/
+bool Appetizer::isVegetarian() const {
+    return vegetarian_;
+}
+
