@@ -23,14 +23,16 @@ Appetizer::Appetizer() {
 * @param spiciness_level The spiciness level of the appetizer.
 * @param vegetarian Flag indicating if the appetizer is vegetarian.
 */
-Appetizer::Appetizer(const std::string& name, const std::vector<std::string>& ingredients, const int& prep_time,
-                     const double& price, const CuisineType& cuisine_type, const ServingStyle& serving_style,
-                     const int& spiciness_level, const bool& vegetarian)
-        : Dish(name, ingredients, prep_time, price, cuisine_type){
+
+Appetizer::Appetizer(const std::string &name, const std::vector<std::string> &ingredients, const int &prep_time,
+                     const double &price, const Dish::CuisineType &cuisine_type,
+                     const Appetizer::ServingStyle &serving_style, const int &spiciness_level,
+                     const bool &vegetarian) : Dish(name, ingredients, prep_time, price, cuisine_type) {
     this->serving_style_ = serving_style;
     this->spiciness_level_ = spiciness_level;
     this->vegetarian_ = vegetarian;
 }
+
 
 /**
 * Sets the serving style of the appetizer.

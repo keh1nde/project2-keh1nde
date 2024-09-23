@@ -17,9 +17,9 @@ public:
     Appetizer();
 
     // Parameterized constructor
-    Appetizer(const std::string& name, const std::vector<std::string>& ingredients, const int& prep_time,
-              const double& price, const CuisineType& cuisine_type, const ServingStyle& serving_style,
-              const int& spiciness_level, const bool& vegetarian);
+    Appetizer(const std::string& name, const std::vector<std::string>& ingredients = {}, const int& prep_time = 0,
+              const double& price = 0.0, const CuisineType& cuisine_type = OTHER, const ServingStyle& serving_style = PLATED,
+              const int& spiciness_level = 0, const bool& vegetarian = false);
 
     // Accessors and Mutators
     void setServingStyle(const ServingStyle& serving_style);
