@@ -9,7 +9,7 @@
  * Initializes all private members with default values.
 */
 Appetizer::Appetizer() {
-
+    serving_style_ = PLATED;
 }
 
 /**
@@ -81,7 +81,7 @@ void Appetizer::setVegetarian(const bool& vegetarian) {
 /**
 * @return True if the appetizer is vegetarian, false otherwise.
 */
-bool Appetizer::isVegetarian() const {
+std::string Appetizer::isVegetarian() const {
     if(vegetarian_){
         return "True";
     } else {

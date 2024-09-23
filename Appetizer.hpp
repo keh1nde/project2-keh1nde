@@ -29,7 +29,7 @@ public:
     int getSpicinessLevel() const;
 
     void setVegetarian(const bool& vegetarian);
-    bool isVegetarian() const;
+    std::string isVegetarian() const;
 
 private:
     ServingStyle serving_style_;

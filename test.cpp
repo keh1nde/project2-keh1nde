@@ -5,6 +5,9 @@
 #include "MainCourse.hpp"
 #include "Dessert.hpp"
 
+
+
+
 int main() {
     // Test case 1: Testing Appetizer class with default and parameterized constructors
     std::cout << "=== Testing Appetizer Class ===" << std::endl;
@@ -28,7 +31,7 @@ int main() {
     std::cout << "Cuisine Type: " << default_appetizer.getCuisineType() << std::endl;
     std::cout << "Spiciness Level: " << default_appetizer.getSpicinessLevel() << std::endl;
     std::cout << "Serving Style: " << default_appetizer.getServingStyle() << std::endl;
-    std::cout << "Vegetarian: " << (default_appetizer.isVegetarian() ? "True" : "False") << std::endl;
+    std::cout << "Vegetarian: " << default_appetizer.isVegetarian()<< std::endl;
 
     // Test case 2: Testing MainCourse class
     std::cout << "\n=== Testing MainCourse Class ===" << std::endl;
@@ -60,7 +63,7 @@ int main() {
         std::cout << side.name << " (" << side.category << ") ";
     }
     std::cout << std::endl;
-    std::cout << "Gluten-Free: " << (main_course.isGlutenFree() ? "True" : "False") << std::endl;
+    std::cout << "Gluten-Free: " << main_course.isGlutenFree() << std::endl;
 
     // Test case 3: Testing Dessert class
     std::cout << "\n=== Testing Dessert Class ===" << std::endl;
@@ -81,7 +84,7 @@ int main() {
     std::cout << "Cuisine Type: " << dessert.getCuisineType() << std::endl;
     std::cout << "Flavor Profile: " << dessert.getFlavorProfile() << std::endl;
     std::cout << "Sweetness Level: " << dessert.getSweetnessLevel() << std::endl;
-    std::cout << "Contains Nuts: " << (dessert.containsNuts() ? "True" : "False") << std::endl;
+    std::cout << "Contains Nuts: " << dessert.containsNuts() << std::endl;
 
     // Testing setName()
     default_appetizer.setName("UNKNOWN");
