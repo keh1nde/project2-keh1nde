@@ -5,8 +5,26 @@
 #include "MainCourse.hpp"
 #include "Dessert.hpp"
 
+std::string sideType(MainCourse::SideDish::Category Category){
+    switch(Category){
+        case MainCourse::SideDish::Category::GRAIN: return "GRAIN";
+        case MainCourse::SideDish::Category::BREAD: return "BREAD";
+        case MainCourse::SideDish::Category::LEGUME: return "LEGUME";
+        case MainCourse::SideDish::Category::PASTA: return "PASTA";
+        case MainCourse::SideDish::Category::SALAD: return "SALAD";
+        case MainCourse::SideDish::Category::SOUP: return "SOUP";
+        case MainCourse::SideDish::Category::STARCHES: return "STARCHES";
+        case MainCourse::SideDish::Category::VEGETABLE: return "VEGETABLE";
+    }
+}
 
-
+std::string servingType(Appetizer::ServingStyle servingStyle){
+    switch(servingStyle){
+        case Appetizer::ServingStyle::BUFFET: return "BUFFET";
+        case Appetizer::ServingStyle::FAMILY_STYLE: return "FAMILY_STYLE";
+        case Appetizer::ServingStyle::PLATED: return "PLATED";
+    }
+}
 
 int main() {
     // Test case 1: Testing Appetizer class with default and parameterized constructors
@@ -30,7 +48,7 @@ int main() {
     std::cout << "Price: $" << default_appetizer.getPrice() << std::endl;
     std::cout << "Cuisine Type: " << default_appetizer.getCuisineType() << std::endl;
     std::cout << "Spiciness Level: " << default_appetizer.getSpicinessLevel() << std::endl;
-    std::cout << "Serving Style: " << default_appetizer.getServingStyle() << std::endl;
+    std::cout << "Serving Style: " << servingType(default_appetizer.getServingStyle()) << std::endl;
     std::cout << "Vegetarian: " << default_appetizer.isVegetarian()<< std::endl;
 
     // Test case 2: Testing MainCourse class
@@ -60,7 +78,7 @@ int main() {
     std::cout << "Protein Type: " << main_course.getProteinType() << std::endl;
     std::cout << "Side Dishes: ";
     for (const auto& side : main_course.getSideDishes()) {
-        std::cout << side.name << " (" << side.category << ") ";
+        std::cout << side.name << " (" << sideType(side.category) << ") ";
     }
     std::cout << std::endl;
     std::cout << "Gluten-Free: " << main_course.isGlutenFree() << std::endl;

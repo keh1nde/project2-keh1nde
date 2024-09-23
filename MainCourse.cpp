@@ -102,7 +102,7 @@ void MainCourse::setGlutenFree(const bool& gluten_free) {
 /**
 * @return True if the main course is gluten-free, false otherwise.
 */
-bool MainCourse::isGlutenFree() const {
+std::string MainCourse::isGlutenFree() const {
     if (gluten_free_){
         return "True";
     } else {

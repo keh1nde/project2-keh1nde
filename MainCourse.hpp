@@ -40,7 +40,7 @@ public:
     std::vector<SideDish> getSideDishes() const;
 
     void setGlutenFree(const bool& gluten_free);
-    bool isGlutenFree() const;
+    std::string isGlutenFree() const;
 
 private:
     CookingMethod cooking_method_;
