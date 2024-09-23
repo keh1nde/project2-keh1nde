@@ -82,6 +82,10 @@ void Appetizer::setVegetarian(const bool& vegetarian) {
 * @return True if the appetizer is vegetarian, false otherwise.
 */
 bool Appetizer::isVegetarian() const {
-    return vegetarian_;
+    if(vegetarian_){
+        return "True";
+    } else {
+        return "False";
+    }
 }
 

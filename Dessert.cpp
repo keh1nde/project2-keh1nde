@@ -44,8 +44,8 @@ void Dessert::setFlavorProfile(const Dessert::FlavorProfile& flavor_profile) {
 }
 
 /**
- * @return The sweetness level of the dessert.
- * */
+* @return The flavor profile of the dessert (as an enum).
+*/
 Dessert::FlavorProfile Dessert::getFlavorProfile() const {
     return flavor_profile_;
 }
@@ -63,8 +63,12 @@ void Dessert::setContainsNuts(const bool& contains_nuts) {
 /**
 * @return True if the dessert contains nuts, false otherwise.
 **/
-bool Dessert::containsNuts() const {
-    return contains_nuts_;
+std::string Dessert::containsNuts() const {
+    if(contains_nuts_){
+        return "True";
+    } else {
+        return "False";
+    }
 }
 /**
 * Sets the sweetness level of the dessert.

@@ -29,7 +29,7 @@ public:
     int getSweetnessLevel() const;
 
     void setContainsNuts(const bool& contains_nuts);
-    bool containsNuts() const;
+    std::string containsNuts() const;
 
 private:
     FlavorProfile flavor_profile_;
