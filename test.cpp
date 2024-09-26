@@ -81,14 +81,16 @@ int main() {
         std::cout << side.name << " (" << sideType(side.category) << ") ";
     }
     std::cout << std::endl;
-    std::cout << "Gluten-Free: " << main_course.isGlutenFree() << std::endl;
+    std::cout << "Gluten-Free: " << (main_course.isGlutenFree() ? "True" : "False") << std::endl;
 
     // Test case 3: Testing Dessert class
     std::cout << "\n=== Testing Dessert Class ===" << std::endl;
 
     // Ingredients for dessert
     std::vector<std::string> dessert_ingredients = {"Flour", "Sugar", "Cocoa Powder", "Eggs"};
-    Dessert dessert("Chocolate Cake", dessert_ingredients, 45, 7.99, Appetizer::CuisineType::FRENCH, Dessert::SWEET, 9, false);
+    Dessert dessert("Chocolate Cake", dessert_ingredients, 45, 7.99,
+                    Appetizer::CuisineType::FRENCH, Dessert::SWEET, 9,
+                    false);
 
     // Print out the dessert's information
     std::cout << "Dish Name: " << dessert.getName() << std::endl;
@@ -102,7 +104,7 @@ int main() {
     std::cout << "Cuisine Type: " << dessert.getCuisineType() << std::endl;
     std::cout << "Flavor Profile: " << dessert.getFlavorProfile() << std::endl;
     std::cout << "Sweetness Level: " << dessert.getSweetnessLevel() << std::endl;
-    std::cout << "Contains Nuts: " << dessert.containsNuts() << std::endl;
+    std::cout << "Contains Nuts: " << (dessert.containsNuts() ? "True" : "False") << std::endl;
 
     // Testing setName()
     default_appetizer.setName("UNKNOWN");

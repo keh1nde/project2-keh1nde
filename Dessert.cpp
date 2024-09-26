@@ -63,12 +63,8 @@ void Dessert::setContainsNuts(const bool& contains_nuts) {
 /**
 * @return True if the dessert contains nuts, false otherwise.
 **/
-std::string Dessert::containsNuts() const {
-    if(contains_nuts_){
-        return "True";
-    } else {
-        return "False";
-    }
+bool Dessert::containsNuts() const {
+    return contains_nuts_;
 }
 /**
 * Sets the sweetness level of the dessert.
