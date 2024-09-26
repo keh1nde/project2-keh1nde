@@ -13,10 +13,10 @@
 class MainCourse : public Dish {
 public:
     enum CookingMethod { GRILLED, BAKED, FRIED, STEAMED, RAW };
+    enum Category { GRAIN, PASTA, LEGUME, BREAD, SALAD, SOUP, STARCHES, VEGETABLE };
 
     struct SideDish {
         std::string name;
-        enum Category { GRAIN, PASTA, LEGUME, BREAD, SALAD, SOUP, STARCHES, VEGETABLE };
         Category category;
     };
 
