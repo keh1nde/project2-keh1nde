@@ -42,10 +42,12 @@ int main() {
     std::cout << "=== Testing Appetizer Class ===" << std::endl;
 
     // Instantiate an appetizer with the default constructor
+    std::vector<std::string> newIngredients;
     Appetizer default_appetizer;
     default_appetizer.setSpicinessLevel(7);
     default_appetizer.setServingStyle(Appetizer::FAMILY_STYLE);
     default_appetizer.setVegetarian(true);
+    default_appetizer.setIngredients(newIngredients);
 
     // Print out the appetizer's information using the accessor functions
     std::cout << std::fixed << std::setprecision(2);
