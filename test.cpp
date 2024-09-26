@@ -7,6 +7,7 @@
 
 
 /**
+ * Translates the Category of a side from enum to string
  * @param Category: The Category as an enum.
  * @return The Category as a string.
  * */
@@ -23,6 +24,8 @@ std::string sideType(MainCourse::Category Category){
     }
 }
 /**
+ * Translates the Category of the servingStyle of an appetizer
+ * from enum to string.
  * @param servingStyle: The Category as an enum.
  * @return The servingStyle as a string.
  * */
