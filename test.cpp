@@ -5,16 +5,16 @@
 #include "MainCourse.hpp"
 #include "Dessert.hpp"
 
-std::string sideType(MainCourse::SideDish::Category Category){
+std::string sideType(MainCourse::Category Category){
     switch(Category){
-        case MainCourse::SideDish::Category::GRAIN: return "GRAIN";
-        case MainCourse::SideDish::Category::BREAD: return "BREAD";
-        case MainCourse::SideDish::Category::LEGUME: return "LEGUME";
-        case MainCourse::SideDish::Category::PASTA: return "PASTA";
-        case MainCourse::SideDish::Category::SALAD: return "SALAD";
-        case MainCourse::SideDish::Category::SOUP: return "SOUP";
-        case MainCourse::SideDish::Category::STARCHES: return "STARCHES";
-        case MainCourse::SideDish::Category::VEGETABLE: return "VEGETABLE";
+        case MainCourse::Category::GRAIN: return "GRAIN";
+        case MainCourse::Category::BREAD: return "BREAD";
+        case MainCourse::Category::LEGUME: return "LEGUME";
+        case MainCourse::Category::PASTA: return "PASTA";
+        case MainCourse::Category::SALAD: return "SALAD";
+        case MainCourse::Category::SOUP: return "SOUP";
+        case MainCourse::Category::STARCHES: return "STARCHES";
+        case MainCourse::Category::VEGETABLE: return "VEGETABLE";
     }
 }
 
@@ -58,8 +58,8 @@ int main() {
     std::vector<std::string> main_course_ingredients = {"Chicken", "Olive Oil", "Garlic", "Rosemary"};
     MainCourse main_course("Grilled Chicken", main_course_ingredients, 30, 18.99, Appetizer::CuisineType::AMERICAN, MainCourse::GRILLED, "Chicken", {}, true);
 
-    MainCourse::SideDish mashed_potatoes = {"Mashed Potatoes", MainCourse::SideDish::STARCHES};
-    MainCourse::SideDish green_beans = {"Green Beans", MainCourse::SideDish::VEGETABLE};
+    MainCourse::SideDish mashed_potatoes = {"Mashed Potatoes", MainCourse::STARCHES};
+    MainCourse::SideDish green_beans = {"Green Beans", MainCourse::VEGETABLE};
 
     main_course.addSideDish(mashed_potatoes);
     main_course.addSideDish(green_beans);
