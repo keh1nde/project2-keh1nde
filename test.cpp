@@ -5,6 +5,11 @@
 #include "MainCourse.hpp"
 #include "Dessert.hpp"
 
+
+/**
+ * @param Category: The Category as an enum.
+ * @return The Category as a string.
+ * */
 std::string sideType(MainCourse::Category Category){
     switch(Category){
         case MainCourse::Category::GRAIN: return "GRAIN";
@@ -17,7 +22,10 @@ std::string sideType(MainCourse::Category Category){
         case MainCourse::Category::VEGETABLE: return "VEGETABLE";
     }
 }
-
+/**
+ * @param servingStyle: The Category as an enum.
+ * @return The servingStyle as a string.
+ * */
 std::string servingType(Appetizer::ServingStyle servingStyle){
     switch(servingStyle){
         case Appetizer::ServingStyle::BUFFET: return "BUFFET";
