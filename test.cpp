@@ -111,5 +111,22 @@ int main() {
     main_course.setName("Grilled Chicken");
     dessert.setName("Chocolate Cake");
 
+
+    // Enum testing:
+    std::cout << "=== Testing Appetizer Class ===" << std::endl;
+    MainCourse MainCourseTest;
+    Dessert DessertTest;
+    Appetizer AppetizerTest;
+
+    std::cout << "=== Testing Appetizer Enum Getters ===" << std::endl;
+    AppetizerTest.setServingStyle(Appetizer::ServingStyle::PLATED);
+    std::cout << AppetizerTest.getServingStyle() << std::endl;
+    std::cout << "=== Testing Dessert Enum Getters ===" << std::endl;
+    DessertTest.setFlavorProfile(Dessert::FlavorProfile::SWEET);
+    std::cout << DessertTest.getFlavorProfile() << std::endl;
+    std::cout << "=== Testing MainCourse Enum Getters  ===" << std::endl;
+    MainCourseTest.setCookingMethod(MainCourse::CookingMethod::RAW);
+    std::cout << MainCourseTest.getCookingMethod() << std::endl;
+
     return 0;
 }
