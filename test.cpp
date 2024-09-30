@@ -72,13 +72,20 @@ int main() {
 
     // Ingredients for main course
     std::vector<std::string> main_course_ingredients = {"Chicken", "Olive Oil", "Garlic", "Rosemary"};
-    MainCourse main_course("Grilled Chicken", main_course_ingredients, 30, 18.99, Appetizer::CuisineType::AMERICAN, MainCourse::GRILLED, "Chicken", {}, true);
+    MainCourse main_course("Grilled Chicken", main_course_ingredients,
+                           30, 18.99,Appetizer::CuisineType::AMERICAN,
+                           MainCourse::GRILLED, "Chicken", {}, true);
 
     MainCourse::SideDish mashed_potatoes = {"Mashed Potatoes", MainCourse::STARCHES};
     MainCourse::SideDish green_beans = {"Green Beans", MainCourse::VEGETABLE};
 
     main_course.addSideDish(mashed_potatoes);
     main_course.addSideDish(green_beans);
+    main_course.setProteinType("Chicken");
+    main_course.setPrice(18.99);
+    main_course.setCuisineType(MainCourse::CuisineType::AMERICAN);
+    main_course.setCookingMethod(MainCourse::CookingMethod::GRILLED);
+    main_course.setGlutenFree(true);
 
     // Print out the main course's information
     std::cout << "Dish Name: " << main_course.getName() << std::endl;
@@ -107,6 +114,15 @@ int main() {
     Dessert dessert("Chocolate Cake", dessert_ingredients, 45, 7.99,
                     Appetizer::CuisineType::FRENCH, Dessert::SWEET, 9,
                     false);
+
+    dessert.setName("Chocolate Cake");
+    dessert.setIngredients(dessert_ingredients);
+    dessert.setPrepTime(45);
+    dessert.setPrice(7.99);
+    dessert.setCuisineType(Appetizer::CuisineType::FRENCH);
+    dessert.setFlavorProfile(Dessert::FlavorProfile::SWEET);
+    dessert.setSweetnessLevel(9);
+    dessert.setContainsNuts(false);
 
     // Print out the dessert's information
     std::cout << "Dish Name: " << dessert.getName() << std::endl;
