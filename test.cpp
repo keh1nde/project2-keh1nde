@@ -48,6 +48,7 @@ int main() {
     default_appetizer.setServingStyle(Appetizer::FAMILY_STYLE);
     default_appetizer.setVegetarian(true);
     default_appetizer.setIngredients(newIngredients);
+    default_appetizer.setPrepTime(0);
 
     // Print out the appetizer's information using the accessor functions
     std::cout << std::fixed << std::setprecision(2);
@@ -118,6 +119,7 @@ int main() {
     std::cout << "Flavor Profile: " << dessert.getFlavorProfile() << std::endl;
     std::cout << "Sweetness Level: " << dessert.getSweetnessLevel() << std::endl;
     std::cout << "Contains Nuts: " << (dessert.containsNuts() ? "True" : "False") << std::endl;
+
 
     // Testing setName()
     default_appetizer.setName("UNKNOWN");
