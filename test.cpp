@@ -49,6 +49,7 @@ int main() {
     default_appetizer.setVegetarian(true);
     default_appetizer.setIngredients(newIngredients);
     default_appetizer.setPrepTime(0);
+    default_appetizer.setPrice(0.0)
 
     // Print out the appetizer's information using the accessor functions
     std::cout << std::fixed << std::setprecision(2);
